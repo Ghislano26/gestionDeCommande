@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/tp.css">
+</head>
+<body>
+                <div class="popup" id="pop">
+                    <h1 class="Stock">Stock Insuffisant</h1>
+                    <div>
+                        <button id="button_pop" onclick="closePop()" class="btn">Fermer</button>
+                    </div>
+
+                </div>
+
+                <div class="NegativePop" id="popNegative">
+                    <h3>Veuillez entrer une quantite positive</h3>
+                    <div>
+                        <button id="button_popNegative" onclick="popNegative()" class="btn">Fermer</button>
+                    </div>
+
+                </div>
+
+
+        <h1> Formulaire de commande</h1>
+        
+    <form action="" id="myForm">
+        <fieldset>
+            <legend>Infos Personnelles</legend>
+                <table border="1">
+                    <tr>
+                        <td><label for="name">Nom et Prenom</label><span class="star">*</span> :</td>
+                        <td colspan="2"><input type="text" id="name" class="inputMain" required maxlength="50"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="adresse">Adresse :</label></td>
+                        <td><input type="number" id="adresse"  required min="0" max="20"'></td>
+                        <td><input type="text" id="adresse" maxlength="30"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="tel">Telephone </label> <span class="star">*</span> :</td>
+                        <td><input type="number" id="tel" min="0" max="20"></td>
+                        <td><input type="text" id="phoneMac" maxlength="30"></td>
+                    </tr>
+
+                </table>
+        </fieldset> <br> <br>
+
+        <fieldset>
+            <legend>Commandes</legend>
+                <table border="1">
+                    <tr>
+                        <td><label for="select">Article </label> <span class="star">*</span> :</td>
+                        <td colspan="">
+                            <select name="" id="select" required onchange="verif()">
+                                <option value="">Choisir un article</option>
+                                <option value="Ordinateur">Ordinateur PC</option>
+                                <option value="Chargeurs">Chargeurs PC</option>
+                                <option value="Onduleurs">Onduleurs</option>
+                                <option value="DD externe">DD externe 1To</option>
+                                <option value="Claviers">Claviers</option>
+                            </select>
+                        </td>
+                        <td>
+                            <div class="overflow" id="overflow1">
+
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="qte">Qté </label><span class="star">*</span>:</td>
+                        <td><input type="number" id="qte" required ></td>
+                        <td>
+                            <div class="overflow" id="overflow2">
+
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <div class="PrixT" id="prixTotal">
+
+                </div>
+                <div class="button">
+                    <input type="button" value="Valider" onclick="calculPrix()">
+                    <input type="reset" value="Annuler" id="reset">
+                </div>
+        </fieldset>
+    
+
+    </form>    
+
+    <div class="drop drop1" id="droping"></div>
+    <!-- <div class="drop drop2"></div> -->
+    <div class="drop drop3" id="droping2"></div>
+    <div class="drop drop4" id="droping3"></div>
+
+
+
+
+
+
+
+
+
+
+    <script src="js/tp.js"></script>
+</body>
+</html>
